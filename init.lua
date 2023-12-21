@@ -22,7 +22,8 @@ local plugins = {
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.5',
      dependencies = { 'nvim-lua/plenary.nvim' }
-  }
+  },
+  {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}
 }
 local opts = {}
 
@@ -34,6 +35,12 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
+local config = require("nvim-treesitter.configs")
+config.setup({
+  ensure_installed = {"lua", "javascript", "java", "rust", "go", "elixir", "haskell", "ruby", "python", "typescript"},
+  highlight = { enable = true },
+  indent = { enable = true }
+})
 
 require("catppuccin").setup()
 vim.cmd.colorscheme "catppuccin"
