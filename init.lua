@@ -16,3 +16,10 @@ require("keymaps")
 require("lazy").setup("plugins") -- loads lazy with plugins and options
 
 vim.cmd.colorscheme 'midnight'
+
+
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
+  vim.lsp.handlers.hover, {
+    border = "rounded"
+  }
+)
