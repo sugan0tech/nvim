@@ -15,3 +15,4 @@ require("vim-options")
 require("keymaps")
 require("lazy").setup("plugins") -- loads lazy with plugins and options
 
+vim.cmd.colorscheme 'midnight'
