@@ -3,7 +3,8 @@ return {
   config = function()
     require('lualine').setup({
       options = {
-        theme = 'iceberg_dark'
+        -- theme = 'iceberg_dark'
+        theme = 'ayu_dark'
       }
     })
   end
