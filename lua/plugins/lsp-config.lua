@@ -1,15 +1,15 @@
 return {
   {
-  "williamboman/mason.nvim",
-  config = function()
-    require("mason").setup()
-  end
+    "williamboman/mason.nvim",
+    config = function()
+      require("mason").setup()
+    end
   },
   {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = {"lua_ls", "tsserver","graphql", "groovyls", "html", "jsonls", "jdtls", "kotlin_language_server"}
+        ensure_installed = { "lua_ls", "tsserver", "graphql", "groovyls", "html", "jsonls", "jdtls", "kotlin_language_server" }
       })
     end
   },
