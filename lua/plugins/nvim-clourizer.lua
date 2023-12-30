@@ -9,7 +9,9 @@ M.config = function()
     "html",
     "css",
     "yaml",
+    "yml",
     "lua",
+    "json",
     "svelte",
     go = { mode = "foreground" },
   })
