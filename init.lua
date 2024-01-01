@@ -11,8 +11,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("vim-options")
-require("keymaps")
+require("core")
 require("lazy").setup("plugins", { ui = { border = "rounded" } }) -- loads lazy with plugins and options
 
 vim.cmd.colorscheme 'midnight'
