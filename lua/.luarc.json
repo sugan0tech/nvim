@@ -1,6 +1,10 @@
 {
     "diagnostics.globals": [
         "opts",
-        "vim"
+        "vim",
+        "harpoon"
+    ],
+    "diagnostics.disable": [
+        "undefined-global"
     ]
 }
