@@ -12,6 +12,11 @@ return { -- UFO
       desc = " 󱃄 Open All Folds",
     },
     {
+      "zg",
+      function() require("ufo").openAllFolds() { "comment", "imports" } end,
+      desc = " 󱃄 Open All Folds",
+    },
+    {
       "z1",
       function() require("ufo").closeFoldsWith(1) end,
       desc = " 󱃄 Close L1 Folds",
