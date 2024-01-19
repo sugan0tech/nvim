@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "tsserver", "graphql", "groovyls", "html", "jsonls", "jdtls", "kotlin_language_server", "gopls" }
+        ensure_installed = { "lua_ls", "tsserver", "graphql", "groovyls", "html", "jsonls", "jdtls", "kotlin_language_server", "gopls" , "pyright"}
       })
     end
   },
@@ -26,6 +26,7 @@ return {
       lspconfig.jdtls.setup({})
       lspconfig.kotlin_language_server.setup({})
       lspconfig.gopls.setup({})
+      lspconfig.pyright.setup({})
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
       vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
