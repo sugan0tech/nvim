@@ -1,8 +1,12 @@
+vim.g.mapleader = " "
 vim.keymap.set('n', 'Q', "@qj")          -- applying macro and enter new line
 vim.keymap.set('x', 'Q', ':norm @q<CR>') -- applying macro to multiple lines
 vim.keymap.set('v', '<leader>y', '"+y')
 vim.keymap.set('v', '<leader>p', '"+p')
-vim.g.mapleader = " "
+-- tab switching binding
+vim.keymap.set({'n', 'v'}, '<leader>ll', 'gt')
+vim.keymap.set({'n', 'v'}, '<leader>hh', 'gT')
+
 
 local map = function(modes, lhs, rhs, opts)
   local options = { silent = true }
