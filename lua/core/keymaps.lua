@@ -46,3 +46,11 @@ map("n", "<leader>fs", function()
   require("core.telescopePickers").prettyDocumentSymbols({ picker = "grep_string" }) end, {desc = "Fuzzy find symbols"})
 map("n", "<leader>ws", function()
   require("core.telescopePickers").prettyWorkspaceSymbols({ picker = "grep_string" }) end, {desc = "Fuzzy workspace symbols"})
+
+-- For Trouble
+vim.keymap.set("n", "<leader>xx", function() require("trouble").toggle() end)
+vim.keymap.set("n", "<leader>xw", function() require("trouble").toggle("workspace_diagnostics") end)
+vim.keymap.set("n", "<leader>xd", function() require("trouble").toggle("document_diagnostics") end)
+vim.keymap.set("n", "<leader>xq", function() require("trouble").toggle("quickfix") end)
+vim.keymap.set("n", "<leader>xl", function() require("trouble").toggle("loclist") end)
+-- vim.keymap.set("n", "gR", function() require("trouble").toggle("lsp_references") end)
