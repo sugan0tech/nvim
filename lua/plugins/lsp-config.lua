@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "tsserver", "html", "jsonls", "jdtls", "kotlin_language_server", "gopls" , "pyright", "svelte"}
+        ensure_installed = { "lua_ls", "tsserver", "html", "jsonls", "jdtls", "kotlin_language_server", "gopls" , "pyright", "svelte", "rust_analyzer"}
       })
     end
   },
@@ -28,6 +28,7 @@ return {
       lspconfig.gopls.setup({})
       lspconfig.pyright.setup({})
       lspconfig.svelte.setup({})
+      lspconfig.rust_analyzer.setup({})
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
       vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)

@@ -4,7 +4,7 @@ return {
   requires = { {"nvim-lua/plenary.nvim"} },
   config = function()
     local harpoon = require("harpoon")
-    vim.keymap.set("n", "hm", function() harpoon:list():append() end)
+    vim.keymap.set("n", "<leader>hm", function() harpoon:list():append() end)
     vim.keymap.set("n", "<leader>hp", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 
     --[[ -- as of now not needed with my workflow
