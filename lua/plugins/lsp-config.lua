@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "tsserver", "html", "jsonls", "jdtls", "kotlin_language_server", "gopls" , "pyright", "svelte", "rust_analyzer", "eslint", "cssls", "csharp_ls", "tailwindcss", "prettier"}
+        ensure_installed = { "lua_ls", "tsserver", "html", "jsonls", "jdtls", "kotlin_language_server", "gopls" , "pyright", "svelte", "rust_analyzer", "eslint", "cssls", "csharp_ls", "tailwindcss"}
       })
     end
   },
@@ -31,8 +31,7 @@ return {
       lspconfig.rust_analyzer.setup({})
       lspconfig.eslint.setup({})
       lspconfig.csharp_ls.setup({})
-      lspconfig.tainwindcss.setup({})
-      lspconfig.prettier.setup({})
+      lspconfig.tailwindcss.setup({})
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
       vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
